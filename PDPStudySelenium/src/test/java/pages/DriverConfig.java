@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -18,12 +19,17 @@ public class DriverConfig {
     }
 
     public WebDriver getDriver() {
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\User\\IdeaProjects\\testArmVideoSelenium\\testArmVideoSelenium\\drivers\\geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("http://arm-video.01-bfv-server.stroki.loc/auth");
+        if (driver == null){
+            System.setProperty("webdriver.gecko.driver", "C:\\Users\\User\\IdeaProjects\\testArmVideoSelenium\\testArmVideoSelenium\\drivers\\geckodriver.exe");
+            driver = new FirefoxDriver();
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().window().maximize();
+        }
         return driver;
+    }
+
+    public void closeDriver(){
+        driver.close();
     }
 
 }

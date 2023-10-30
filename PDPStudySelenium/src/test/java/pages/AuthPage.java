@@ -1,7 +1,10 @@
 package pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
-public class AuthPage extends BasePage{
+
+public class AuthPage extends BasePage {
+
     WebDriver driver;
 
     public AuthPage(){
@@ -11,6 +14,11 @@ public class AuthPage extends BasePage{
     private By loginField = By.xpath("//input[@formcontrolname='login']");
     private By passwordField = By.xpath("//input[@type='password']");
     private By authButton = By.xpath("//button[contains(@class,'login-form-button')]");
+
+    public AuthPage openAuthPage(){
+        driver.get("http://arm-video.01-bfv-server.stroki.loc/auth");
+        return this;
+    }
 
     public AuthPage typeLogin (String login){
         driver.findElement(loginField).sendKeys(login);

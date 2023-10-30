@@ -1,8 +1,6 @@
 package steps;
 
-import org.openqa.selenium.WebDriver;
 import pages.AuthPage;
-import pages.BasePage;
 import pages.NavedenieCamerPage;
 import pages.Properties;
 
@@ -18,6 +16,7 @@ public class AuthSteps {
 
 
     public NavedenieCamerPage logIn() {
+        authPage.openAuthPage();
         authPage.typeLogin(login.getProperty());
         authPage.typePassword(password.getProperty());
         authPage.clickButton();
