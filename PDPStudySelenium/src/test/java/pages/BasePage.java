@@ -20,15 +20,16 @@ public class BasePage {
 
         return driver.findElement(name);
     }
-    public void clickOnElementWithText(String text){
-        driver.findElement(By.xpath(String.format("//*[text()='%s']", text)));
-    }
+//    public void clickOnElementWithText(String text){
+//        driver.findElement(By.xpath(String.format("//*[text()='%s']", text)));
+//    }
     public void clickOnElement(By locator,WebDriver driver){
-//        driver.findElement(By.xpath(String.format("%s", locator))).click();
         driver.findElement(locator).click();
+        //        driver.findElement(By.xpath(String.format("%s", locator))).click();
     }
 
     public void typeText(By locator,String text, WebDriver driver){
+
         driver.findElement(locator).sendKeys(text);
     }
 

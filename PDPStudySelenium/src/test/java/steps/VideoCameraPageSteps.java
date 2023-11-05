@@ -1,15 +1,10 @@
 package steps;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-
 import pages.VideoCameraPage;
-
 public class VideoCameraPageSteps extends CommonSteps {
-
 
     VideoCameraPage videoCameraPage;
     public VideoCameraPageSteps() {
+
         videoCameraPage = new VideoCameraPage();
     }
 

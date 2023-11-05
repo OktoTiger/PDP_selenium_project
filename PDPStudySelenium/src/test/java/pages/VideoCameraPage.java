@@ -12,7 +12,7 @@ public class VideoCameraPage extends BasePage {
     WebDriver driver;
     BasePage basePage;
 
-    public static String comment = "Камера 7 отредактированно";
+    private String comment = "Камера 7 отредактированно";
 
     public VideoCameraPage(){
         driver = DriverConfig.getInstance().getDriver();
@@ -57,7 +57,6 @@ public class VideoCameraPage extends BasePage {
         String text = getText(getElementComment(commentOneEdited,driver));
         Assert.assertEquals(comment, text);
         return this;
-
     }
 
 

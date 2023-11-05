@@ -26,14 +26,10 @@ public class VideoCameraPageTest {
     }
 
     @After
-    public void closeDriver(){
+    public void closeDriver() {
+
         DriverConfig.getInstance().closeDriver();
     }
-
-
-
-
-
 
 
 }

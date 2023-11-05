@@ -1,6 +1,4 @@
 package pages;
-
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -29,6 +27,7 @@ public class DriverConfig {
     }
 
     public void closeDriver(){
+
         driver.close();
     }
 

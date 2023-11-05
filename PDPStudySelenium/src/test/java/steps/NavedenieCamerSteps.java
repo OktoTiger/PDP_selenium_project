@@ -1,17 +1,36 @@
-//package steps;
+package steps;
+import pages.CommonException;
+import pages.NavedenieCamerPage;
+public class NavedenieCamerSteps extends CommonSteps {
+
+    NavedenieCamerPage navedenieCamerPage;
+
+    public NavedenieCamerSteps() {
+
+        navedenieCamerPage = new NavedenieCamerPage();
+    }
+
+    public void usingToolsOnNavedinieCamerPage() throws CommonException {
+        navedenieCamerPage.getPlanZala();
+        navedenieCamerPage.closePlanZala();
+        navedenieCamerPage.getCamera();
+        navedenieCamerPage.checkTitle1();
+        navedenieCamerPage.clickBlockCameraButton();
+        navedenieCamerPage.checkTitle2();
+        navedenieCamerPage.getPreset();
+        navedenieCamerPage.clickOnListOfVideoCameras();
+        navedenieCamerPage.getVideoCamera();
+        navedenieCamerPage.clickRecordButton();
+        navedenieCamerPage.checkWarningText();
+        navedenieCamerPage.clickYesButton();
+        navedenieCamerPage.clickDeblockCameraButton();
+
+
+    }
+
 //
-//import org.openqa.selenium.WebDriver;
-//import pages.BasePage;
-//
-//public class NavedenieCamerSteps extends BasePage {
-//
-//    WebDriver driver;
-//    NavedenieCamerPage navedenieCamerPage;
-//    public NavedenieCamerSteps(WebDriver driver) {
-//        this.driver=driver;
-//        navedenieCamerPage = new NavedenieCamerPage(driver);
-//    }
-//
+
+
 //    public void getPlanZala(){
 //        driver.findElement(navedenieCamerPage.planZala).click();
 //    }
@@ -72,4 +91,4 @@
 //
 //
 //
-//}
+}
